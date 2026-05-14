@@ -87,8 +87,8 @@
             right: 10%;
             top: 50%;
             transform: translateY(-50%);
-            width: 300px;
-            height: 300px;
+            width: min(300px, 40vw);
+            height: min(300px, 40vw);
             opacity: 0.05;
             pointer-events: none;
         }
@@ -264,6 +264,139 @@
         }
 
 
+        /* ── Responsive ── */
+
+        /* Tablet: 768px and below */
+        @media (max-width: 768px) {
+
+            header {
+                padding: 16px 5%;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                justify-content: flex-start;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 12px;
+                font-size: 0.85rem;
+            }
+
+            .brand-name {
+                font-size: 1.2rem;
+            }
+
+            .hero {
+                padding: 60px 5% 40px;
+            }
+
+            .hero > div[style] {
+                flex-direction: column !important;
+                gap: 2rem !important;
+            }
+
+            .hero > div[style] img {
+                width: 100% !important;
+                height: auto !important;
+                max-width: 380px;
+                margin: 0 auto;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            section {
+                padding: 40px 5%;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .commitment-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full-width {
+                grid-column: span 1;
+            }
+
+            footer {
+                grid-template-columns: 1fr;
+                padding: 40px 5% 30px;
+                gap: 32px;
+            }
+
+            .disclaimer {
+                grid-column: span 1;
+            }
+        }
+
+        /* Mobile: 480px and below */
+        @media (max-width: 480px) {
+
+            header {
+                padding: 12px 4%;
+            }
+
+            .brand-name {
+                font-size: 1rem;
+            }
+
+            nav a {
+                font-size: 0.8rem;
+            }
+
+            .client-portal {
+                padding: 6px 10px;
+                font-size: 0.8rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .hero {
+                padding: 40px 4% 30px;
+            }
+
+            .hero-sub {
+                font-size: 0.95rem;
+            }
+
+            section {
+                padding: 32px 4%;
+            }
+
+            .card {
+                padding: 24px 20px;
+            }
+
+            footer {
+                padding: 32px 4% 24px;
+            }
+        }
     </style>
 </head>
 <body>
