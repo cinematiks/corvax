@@ -264,6 +264,47 @@
         }
 
 
+        /* FAQ Accordion */
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: left;
+            padding: 20px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+        .faq-question:hover { color: var(--accent-purple); }
+        .faq-icon {
+            font-size: 1.4rem;
+            color: var(--accent-purple);
+            flex-shrink: 0;
+            transition: transform 0.2s;
+            font-weight: 300;
+        }
+        .faq-answer {
+            display: none;
+            padding: 0 0 20px;
+        }
+        .faq-answer p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.75;
+            margin: 0;
+        }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+        .faq-item.open .faq-answer { display: block; }
+
         /* ── Responsive ── */
 
         /* Tablet: 768px and below */
@@ -407,9 +448,9 @@
             <span class="brand-name">Corvax Financial</span>
         </div>
         <nav>
-            <a href="#">Approach</a>
-            <a href="#">About</a>
-            <a href="#">Insights</a>
+            <a href="#approach">Approach</a>
+            <a href="about.html">About</a>
+            <a href="#insights">Insights</a>
             <a href="https://portal.raisr.com" class="client-portal" target="_blank" rel="noopener">Client portal</a>
         </nav>
     </header>
@@ -439,8 +480,7 @@
         </div>
     </section>
 
-    <!-- Offerings Section -->
-    <section>
+    <section id="approach">
         <span class="section-label">What we offer</span>
         <h2>Exempt market strategies</h2>
         <div class="grid-3">
@@ -487,21 +527,133 @@
     </section>
 
     <!-- Insights Section -->
-    <section>
+    <section id="insights">
         <span class="section-label">Latest Insights</span>
         <h2>Commentary</h2>
         <div class="grid-3">
-            <div class="card">
-                <span class="section-label">Exempt Market</span>
-                <p>What "accredited investor" actually means in 2026</p>
+            <div class="card" style="display:flex; flex-direction:column; justify-content:space-between;">
+                <div>
+                    <span class="section-label">Exempt Market</span>
+                    <p style="font-size:1rem; font-weight:600; color:var(--text-main); margin-bottom:12px;">What "accredited investor" actually means in 2026</p>
+                    <p style="font-size:0.875rem;">The thresholds haven't changed much, but who qualifies and how to document it has more nuance than most investors realise. A plain-language breakdown.</p>
+                </div>
+                <a href="insights/accredited-investor-2026.html" style="color:var(--accent-purple); font-size:0.85rem; text-decoration:none; margin-top:20px; display:inline-block;">Read article →</a>
             </div>
-            <div class="card">
-                <span class="section-label">Due Diligence</span>
-                <p>Reading an offering memorandum: what to look for</p>
+            <div class="card" style="display:flex; flex-direction:column; justify-content:space-between;">
+                <div>
+                    <span class="section-label">Due Diligence</span>
+                    <p style="font-size:1rem; font-weight:600; color:var(--text-main); margin-bottom:12px;">Reading an offering memorandum: what to look for</p>
+                    <p style="font-size:0.875rem;">Most investors never read the OM in full. The ones who do tend to ask better questions — and make better decisions. Here is what actually matters.</p>
+                </div>
+                <a href="insights/reading-an-om.html" style="color:var(--accent-purple); font-size:0.85rem; text-decoration:none; margin-top:20px; display:inline-block;">Read article →</a>
             </div>
-            <div class="card">
-                <span class="section-label">Private Debt</span>
-                <p>Why MICs have outperformed in a high-rate environment</p>
+            <div class="card" style="display:flex; flex-direction:column; justify-content:space-between;">
+                <div>
+                    <span class="section-label">Private Debt</span>
+                    <p style="font-size:1rem; font-weight:600; color:var(--text-main); margin-bottom:12px;">Why MICs have outperformed in a high-rate environment</p>
+                    <p style="font-size:0.875rem;">Mortgage investment corporations are not new, but the current rate cycle has made them unusually relevant for income-focused investors. What to understand before you invest.</p>
+                </div>
+                <a href="insights/mics-high-rate-environment.html" style="color:var(--accent-purple); font-size:0.85rem; text-decoration:none; margin-top:20px; display:inline-block;">Read article →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" style="background-color: var(--card-bg); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <span class="section-label">Client perspectives</span>
+        <h2>What clients say</h2>
+        <div class="grid-3">
+            <div style="padding: 10px 0;">
+                <p style="color: var(--text-main); font-size: 1rem; line-height: 1.7; margin-bottom: 20px;">"John took the time to walk me through the offering memorandum line by line. I felt like I actually understood what I was investing in — that is rare in this space."</p>
+                <p style="color: var(--accent-purple); font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;">— Accredited Investor, Calgary</p>
+            </div>
+            <div style="padding: 10px 0;">
+                <p style="color: var(--text-main); font-size: 1rem; line-height: 1.7; margin-bottom: 20px;">"I appreciated that he said no to a deal he didn't believe in. That told me more about how he operates than any amount of marketing."</p>
+                <p style="color: var(--accent-purple); font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;">— Eligible Investor, Edmonton</p>
+            </div>
+            <div style="padding: 10px 0;">
+                <p style="color: var(--text-main); font-size: 1rem; line-height: 1.7; margin-bottom: 20px;">"Responsive, transparent about fees, and genuinely invested alongside me. The alignment of interests is real, not just a talking point."</p>
+                <p style="color: var(--accent-purple); font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;">— Accredited Investor, Alberta</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <span class="section-label">Common questions</span>
+        <h2>FAQ</h2>
+        <div style="max-width: 760px;">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    What is an accredited investor?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>In Alberta, an accredited investor is an individual who meets one or more of the following criteria: net income before taxes exceeding $200,000 in each of the two most recent calendar years (or combined net income with a spouse exceeding $300,000), financial assets (cash and securities) exceeding $1,000,000, or net assets of at least $5,000,000. Certain other categories also apply, including registered dealers, advisers, and certain institutional entities. Accredited investor status must be verified and documented before an investment can proceed.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    What is an eligible investor?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>An eligible investor is a broader category than accredited investor. Under Alberta's offering memorandum exemption, an eligible investor includes individuals with net assets of at least $400,000 (alone or with a spouse), net income before taxes of at least $75,000 in the two most recent years, or who have completed an eligible investor risk acknowledgement form. Eligible investors may face investment limits depending on the exemption used. We will assess which category applies to you as part of our know-your-client process.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    What is the exempt market?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>The exempt market refers to securities sold without a prospectus, using specific exemptions under securities legislation. These include private placements, mortgage investment corporations, limited partnerships, real estate investment trusts, and other private capital structures. Because these securities are not publicly listed, they are not subject to the same ongoing disclosure requirements as stocks or bonds — which creates both opportunity and additional risk. See our <a href="risk-disclosure.html" style="color: var(--accent-purple);">risk disclosure</a> for a full explanation.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How are you compensated?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We receive a dealing commission paid by the issuer — typically a percentage of the amount you invest. This fee is always disclosed in the offering memorandum before you make any decision. In some cases, ongoing trailer fees may apply and will also be disclosed. We also invest our own capital alongside clients in many deals, which means our financial interests are directly tied to the same outcomes. Full details are available in our <a href="regulatory-disclosure.html" style="color: var(--accent-purple);">regulatory disclosure</a>.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Can I sell my exempt market investment if I need to?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Generally, no — or not easily. Exempt market securities are illiquid. There is no stock exchange or secondary market where you can sell your position on demand. You should assume that your capital will be tied up for the full term of the investment, which can range from two to seven years or more depending on the structure. This is one of the most significant risks of exempt market investing and should be carefully considered before committing capital.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    What is an offering memorandum?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>An offering memorandum (OM) is a legal document prepared by the issuer that describes the investment in detail — the business, the use of proceeds, the risk factors, the compensation structure, and your rights as an investor. Under the offering memorandum exemption, you are entitled to receive an OM before investing and to review it carefully. You should read it in full and ask questions about anything that is unclear. We strongly encourage clients to seek independent legal and tax advice before investing.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    What kinds of investments do you work with?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We focus on three main categories: private debt (including mortgage investment corporations and private lending funds), private equity (limited partnership interests and direct equity placements), and real assets (real estate investment trusts, development projects, and infrastructure funds). We do not present every product in these categories — only those that have passed our independent due diligence process and that we believe are appropriate for our client base.</p>
+                </div>
+            </div>
+            <div class="faq-item" style="border-bottom: none;">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How do I get started?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>The first step is a brief introductory conversation to understand your situation, investment objectives, and whether our approach is a fit. Use the contact form below or reach us directly at <a href="mailto:info@corvaxfinancial.com" style="color: var(--accent-purple);">info@corvaxfinancial.com</a> or 587.433.3134. There is no obligation and no pressure — if we do not believe a particular investment is right for you, we will tell you.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -519,7 +671,7 @@
                     <p>Canada</p>
                 </div>
             </div>
-            <form class="form-grid" action="#" method="post">
+            <form class="form-grid" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
                 <div class="form-group">
                     <label for="first-name">First Name</label>
                     <input type="text" id="first-name" name="first_name" placeholder="Jane">
@@ -565,11 +717,16 @@
         <div class="footer-nav">
             <h4>Navigate</h4>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Approach</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Insights</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#approach">Approach</a></li>
+                <li><a href="#insights">Insights</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="https://portal.raisr.com" target="_blank" rel="noopener">Client portal</a></li>
+                <li><a href="risk-disclosure.html">Risk disclosure</a></li>
+                <li><a href="privacy-policy.html">Privacy policy</a></li>
+                <li><a href="regulatory-disclosure.html">Regulatory disclosure</a></li>
+                <li><a href="rdi.html">Terms of service / RDI</a></li>
             </ul>
         </div>
         <div class="footer-contact">
@@ -579,9 +736,60 @@
             <p style="font-size: 0.9rem; color: var(--text-dim);">Canada</p>
         </div>
         <div class="disclaimer">
-            Corvax Financial is operated by John P. Sao Miguel, registered as an Exempt Market Dealing Representative in the Province of Alberta. The information contained on this website is intended solely for residents of Alberta and is not directed to individuals in any other jurisdiction. This website does not constitute a solicitation or an offer to sell securities. All investment opportunities are offered by Offering Memorandum to qualified investors only. Past performance is not indicative of future results. All investments involve risk, including the possible loss of principal.
+            Corvax Financial is operated by John P. Sao Miguel, registered as an Exempt Market Dealing Representative in the Province of Alberta with Axcess Capital Advisors Inc. Exempt market products are made available through Axcess Capital Advisors Inc., a registered exempt market dealership. This information does not constitute a solicitation for sale or purchase of securities. Offerings are made pursuant to an offering memorandum and only available to qualified investors in Alberta who meet certain eligibility or minimum purchase requirements. Investments are not guaranteed or insured and the value of investments may fluctuate. The information contained on this website is intended solely for residents of Alberta and is not directed to individuals in any other jurisdiction. Past performance is not indicative of future results.
+            <br><br>
+            <a href="about.html" style="color:#555; text-decoration:underline; margin-right:20px;">About</a>
+            <a href="risk-disclosure.html" style="color:#555; text-decoration:underline; margin-right:20px;">Risk disclosure</a>
+            <a href="privacy-policy.html" style="color:#555; text-decoration:underline; margin-right:20px;">Privacy policy</a>
+            <a href="regulatory-disclosure.html" style="color:#555; text-decoration:underline; margin-right:20px;">Regulatory disclosure</a>
+            <a href="rdi.html" style="color:#555; text-decoration:underline;">Terms of service / RDI</a>
+            <br><br>© 2026 Corvax Financial. All rights reserved.
         </div>
     </footer>
+
+    <!-- Cookie consent banner -->
+    <div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#14141d; border-top:1px solid #2a2a35; padding:16px 8%; display:flex; align-items:center; justify-content:space-between; gap:1rem; z-index:9999; flex-wrap:wrap;">
+        <p style="font-size:0.8rem; color:#a0a0b0; margin:0; max-width:700px;">This website uses cookies for basic analytics to understand how visitors use the site. No personal data is sold or shared with third parties. See our <a href="privacy-policy.html" style="color:#7b61ff;">privacy policy</a>.</p>
+        <div style="display:flex; gap:12px; flex-shrink:0;">
+            <button onclick="acceptCookies()" style="background:#7b61ff; color:#fff; border:none; padding:8px 20px; border-radius:4px; font-size:0.85rem; cursor:pointer;">Accept</button>
+            <button onclick="declineCookies()" style="background:transparent; color:#a0a0b0; border:1px solid #2a2a35; padding:8px 20px; border-radius:4px; font-size:0.85rem; cursor:pointer;">Decline</button>
+        </div>
+    </div>
+
+    <script>
+        // FAQ accordion
+        function toggleFaq(btn) {
+            const item = btn.parentElement;
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Cookie consent
+        const banner = document.getElementById('cookie-banner');
+        if (!localStorage.getItem('cookie-consent')) {
+            banner.style.display = 'flex';
+        }
+        function acceptCookies() {
+            localStorage.setItem('cookie-consent', 'accepted');
+            banner.style.display = 'none';
+        }
+        function declineCookies() {
+            localStorage.setItem('cookie-consent', 'declined');
+            banner.style.display = 'none';
+        }
+    </script>
 
 </body>
 </html>

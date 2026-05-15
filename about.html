@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Corvax Financial</title>
+    <meta name="description" content="About John P. Sao Miguel, Exempt Market Dealing Representative at Corvax Financial, registered with Axcess Capital Advisors Inc. in Alberta.">
+    <style>
+        :root { --bg-color:#0a0a0f; --card-bg:#14141d; --accent-purple:#7b61ff; --text-main:#ffffff; --text-dim:#a0a0b0; --border-color:#2a2a35; }
+        * { box-sizing:border-box; margin:0; padding:0; }
+        body { font-family:Helvetica,"Helvetica Neue",Arial,sans-serif; background-color:var(--bg-color); color:var(--text-main); line-height:1.7; overflow-x:hidden; }
+        header { display:flex; justify-content:space-between; align-items:center; padding:20px 8%; position:sticky; top:0; background:rgba(10,10,15,0.95); backdrop-filter:blur(10px); z-index:1000; border-bottom:1px solid var(--border-color); }
+        .brand-name { font-size:1.6rem; font-weight:700; letter-spacing:0.02em; text-decoration:none; color:var(--text-main); }
+        nav a { color:var(--text-dim); text-decoration:none; margin-left:30px; font-size:0.9rem; transition:color 0.3s; }
+        nav a:hover { color:var(--text-main); }
+        .client-portal { border:1px solid var(--border-color); padding:8px 16px; border-radius:4px; }
+        .section-label { font-size:0.75rem; text-transform:uppercase; letter-spacing:2px; color:var(--accent-purple); margin-bottom:15px; display:block; }
+        h1 { font-size:2.5rem; line-height:1.2; margin-bottom:16px; }
+        h2 { font-size:1.3rem; font-weight:600; margin:40px 0 12px; color:var(--text-main); }
+        p { color:var(--text-dim); font-size:0.95rem; margin-bottom:16px; line-height:1.8; }
+        ul { color:var(--text-dim); font-size:0.95rem; margin:0 0 16px 1.5rem; }
+        ul li { margin-bottom:8px; }
+
+        .about-hero { padding:80px 8% 60px; border-bottom:1px solid var(--border-color); display:flex; gap:4rem; align-items:flex-start; }
+        .about-hero-text { flex:1; max-width:620px; }
+        .about-hero-text .lead { color:var(--text-dim); font-size:1.05rem; margin-top:16px; line-height:1.8; }
+        .photo-placeholder { flex-shrink:0; width:220px; height:260px; background:var(--card-bg); border:1px solid var(--border-color); border-radius:4px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:12px; }
+        .photo-placeholder p { color:#333; font-size:0.8rem; text-align:center; margin:0; padding:0 16px; }
+        .photo-icon { color:#2a2a35; font-size:3rem; }
+
+        .bio-section { padding:60px 8%; border-bottom:1px solid var(--border-color); max-width:1100px; }
+        .bio-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-top:2rem; }
+
+        .registrant-disclosure { background:var(--card-bg); border:1px solid var(--border-color); border-radius:4px; padding:24px 28px; margin-top:40px; }
+        .registrant-disclosure p { color:var(--text-dim); font-size:0.875rem; margin:0; line-height:1.75; }
+        .registrant-disclosure strong { color:var(--text-main); }
+
+        .info-table { width:100%; border-collapse:collapse; margin-bottom:0; }
+        .info-table td { padding:12px 16px; font-size:0.9rem; border-bottom:1px solid var(--border-color); vertical-align:top; }
+        .info-table td:first-child { color:var(--text-dim); width:45%; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; }
+        .info-table td:last-child { color:var(--text-main); }
+        .info-table tr:last-child td { border-bottom:none; }
+        .info-card { background:var(--card-bg); border:1px solid var(--border-color); border-radius:4px; padding:24px; margin-top:2rem; }
+
+        .values-section { padding:60px 8%; border-bottom:1px solid var(--border-color); background:var(--card-bg); }
+        .values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:2rem; }
+        .value-item h3 { font-size:1rem; font-weight:600; margin-bottom:8px; }
+        .value-item p { font-size:0.9rem; color:var(--text-dim); margin:0; }
+
+        .cta-section { padding:60px 8%; text-align:center; }
+        .cta-section h2 { font-size:1.8rem; margin-bottom:16px; }
+        .cta-section p { max-width:520px; margin:0 auto 28px; }
+        .cta-btn { display:inline-block; background:var(--accent-purple); color:#fff; text-decoration:none; padding:14px 32px; border-radius:4px; font-size:0.95rem; font-weight:500; }
+
+        footer { padding:40px 8%; border-top:1px solid var(--border-color); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+        .footer-links a { color:var(--text-dim); text-decoration:none; font-size:0.85rem; margin-left:16px; }
+        .footer-links a:first-child { margin-left:0; }
+        .footer-links a:hover { color:var(--text-main); }
+        .footer-copy { color:#444; font-size:0.8rem; }
+
+        @media (max-width:768px) {
+            header { padding:16px 5%; flex-wrap:wrap; gap:12px; }
+            nav a { margin-left:0; margin-right:12px; }
+            .brand-name { font-size:1.2rem; }
+            .about-hero { flex-direction:column; padding:50px 5% 40px; gap:2rem; }
+            .photo-placeholder { width:100%; height:200px; }
+            .bio-section { padding:40px 5%; }
+            .bio-grid { grid-template-columns:1fr; gap:2rem; }
+            .values-section { padding:40px 5%; }
+            .values-grid { grid-template-columns:1fr; }
+            .cta-section { padding:40px 5%; }
+            footer { padding:30px 5%; flex-direction:column; align-items:flex-start; }
+            .footer-links a { margin-left:0; margin-right:16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="brand-name">Corvax Financial</a>
+        <nav>
+            <a href="index.html#approach">Approach</a>
+            <a href="about.html">About</a>
+            <a href="index.html#insights">Insights</a>
+            <a href="https://portal.raisr.com" class="client-portal" target="_blank" rel="noopener">Client portal</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <div class="about-hero">
+        <div class="about-hero-text">
+            <span class="section-label">About</span>
+            <h1>John P. Sao Miguel</h1>
+            <p class="lead">Exempt Market Dealing Representative operating as Corvax Financial, registered with Axcess Capital Advisors Inc. With over 15 years across investment operations, compliance, investor relations, and financial services, I bring institutional discipline to private market investing for accredited and eligible investors in Alberta.</p>
+        </div>
+        <div class="photo-placeholder">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="18" r="10" stroke="#2a2a35" stroke-width="2"/>
+                <path d="M4 44c0-11 9-18 20-18s20 7 20 18" stroke="#2a2a35" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <p>Photo coming soon</p>
+        </div>
+    </div>
+
+    <!-- Bio -->
+    <div class="bio-section">
+        <span class="section-label">Background</span>
+        <div class="bio-grid">
+            <div>
+                <h2>My approach</h2>
+                <p>The exempt market is not a simple product category — it is a broad universe of private capital structures, each with distinct risk profiles, liquidity characteristics, and return mechanics. My job is not to present every available deal. It is to present the ones that have passed a rigorous review and that are genuinely suited to each client's circumstances.</p>
+                <p>Before any offering reaches a client conversation, I review the offering memorandum in full, assess the issuer's track record, and form an independent view of whether the risk-return profile makes sense. I decline more deals than I accept. That discipline is the foundation of what Corvax Financial is built on.</p>
+                <p>I invest my own capital in the same opportunities I recommend to clients. The alignment is structural, not theoretical.</p>
+            </div>
+            <div>
+                <h2>Experience</h2>
+                <p>My background spans over 15 years across investment operations, compliance, investor relations, and financial services in Alberta's private capital market.</p>
+                <p>I currently serve as Manager, Investment Operations &amp; Platform Implementation at a registered exempt market dealership in Calgary, where I work across operational infrastructure, investment product implementation, and compliance processes.</p>
+                <p>Prior to that, I spent four years as a Compliance &amp; Operations Analyst at a Calgary-based exempt market firm, and a year as Trust &amp; Investment Coordinator at a private family office — roles that deepened my understanding of private capital structures, regulatory obligations, and the operational mechanics of investment vehicles.</p>
+                <p>Earlier in my career I spent nine years at a private real estate exempt market issuer in Calgary, progressing from project coordination into a North American investor relations management role. Working directly with investors across the continent on private real estate and land development structures gave me a ground-level view of how exempt market products perform across a full market cycle — and what investors actually need from the people presenting those opportunities to them. Prior to that I held a financial services management role at a major Canadian bank.</p>
+
+                <h2>Outside of work</h2>
+                <p>Before university I completed a year of service through Katimavik, a national volunteer program — an experience that shaped how I think about community and long-term commitment. I hold a Lean Six Sigma Green Belt certification and apply process discipline to how Corvax Financial operates — because rigour in operations is as important as rigour in due diligence.</p>
+            </div>
+        </div>
+
+        <!-- Registrant Disclosure — as per Canvest precedent, directly beneath bio -->
+        <div class="registrant-disclosure">
+            <p><strong>Registrant disclosure:</strong> John P. Sao Miguel is a Registered Dealing Representative in the Province of Alberta with <strong>Axcess Capital Advisors Inc.</strong> Exempt market products are offered for sale through Axcess Capital Advisors Inc., a registered exempt market dealership. Corvax Financial is a trade name operated by John P. Sao Miguel.</p>
+        </div>
+    </div>
+
+    <!-- Registration Details -->
+    <div style="padding:60px 8%; border-bottom:1px solid var(--border-color); max-width:1100px;">
+        <span class="section-label">Registration</span>
+        <h2>Regulatory information</h2>
+        <p>You may verify registration status at any time through the Canadian Securities Administrators' National Registration Search at <a href="https://www.securities-administrators.ca/nrs/nrsearch.aspx" target="_blank" rel="noopener" style="color:var(--accent-purple);">securities-administrators.ca</a>.</p>
+        <div class="info-card">
+            <table class="info-table">
+                <tr><td>Registrant name</td><td>John P. Sao Miguel</td></tr>
+                <tr><td>Operating / trade name</td><td>Corvax Financial</td></tr>
+                <tr><td>Registration category</td><td>Exempt Market Dealing Representative</td></tr>
+                <tr><td>Registered jurisdiction</td><td>Province of Alberta</td></tr>
+                <tr><td>Dealer firm</td><td>Axcess Capital Advisors Inc.</td></tr>
+                <tr><td>Regulator</td><td>Alberta Securities Commission (ASC)</td></tr>
+                <tr><td>Email</td><td><a href="mailto:info@corvaxfinancial.com" style="color:var(--accent-purple);">info@corvaxfinancial.com</a></td></tr>
+                <tr><td>Phone</td><td>587.433.3134</td></tr>
+                <tr><td>LinkedIn</td><td><a href="https://www.linkedin.com/in/johnpsaomiguel" target="_blank" rel="noopener" style="color:var(--accent-purple);">linkedin.com/in/johnpsaomiguel</a></td></tr>
+            </table>
+        </div>
+        <p style="font-size:0.8rem; color:#555; margin-top:16px;">For full disclosure of registration details, compensation structure, conflicts of interest, and complaint handling procedures, see the <a href="regulatory-disclosure.html" style="color:var(--accent-purple);">Regulatory Disclosure</a> page and the <a href="rdi.html" style="color:var(--accent-purple);">Relationship Disclosure Information</a> document.</p>
+    </div>
+
+    <!-- Values -->
+    <div class="values-section">
+        <span class="section-label">What we stand for</span>
+        <h2>Principles</h2>
+        <div class="values-grid">
+            <div class="value-item">
+                <h3>Discipline over volume</h3>
+                <p>We limit the number of offerings we present and the number of clients we work with. Depth of relationship and quality of analysis cannot coexist with high volume.</p>
+            </div>
+            <div class="value-item">
+                <h3>Honest assessment</h3>
+                <p>If an investment is not right for you, we will tell you. If we would not invest our own capital in it, we will not ask you to. That is the standard we hold ourselves to.</p>
+            </div>
+            <div class="value-item">
+                <h3>Long-term thinking</h3>
+                <p>The raven plans ahead and holds information across time. We think about capital allocation the same way — with patience, pattern recognition, and a long horizon.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <span class="section-label">Work together</span>
+        <h2>Interested in having a conversation?</h2>
+        <p>If you are an accredited or eligible investor in Alberta looking for access to private market opportunities, reach out. There is no obligation — just a straightforward conversation about whether we are a fit.</p>
+        <a href="index.html#contact" class="cta-btn">Get in touch</a>
+    </div>
+
+    <footer>
+        <span class="footer-copy">© 2026 Corvax Financial. All rights reserved.</span>
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="https://www.linkedin.com/in/johnpsaomiguel" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="risk-disclosure.html">Risk disclosure</a>
+            <a href="privacy-policy.html">Privacy policy</a>
+            <a href="regulatory-disclosure.html">Regulatory disclosure</a>
+            <a href="rdi.html">Terms / RDI</a>
+        </div>
+    </footer>
+
+</body>
+</html>
