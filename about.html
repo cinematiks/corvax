@@ -27,6 +27,7 @@
         .photo-placeholder { flex-shrink:0; width:220px; height:260px; background:var(--card-bg); border:1px solid var(--border-color); border-radius:4px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:12px; }
         .photo-placeholder p { color:#333; font-size:0.8rem; text-align:center; margin:0; padding:0 16px; }
         .photo-icon { color:#2a2a35; font-size:3rem; }
+        .about-photo { flex-shrink:0; width:220px; height:260px; object-fit:cover; object-position:center top; border-radius:4px; border:1px solid var(--border-color); display:block; }
 
         .bio-section { padding:60px 8%; border-bottom:1px solid var(--border-color); max-width:1100px; }
         .bio-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-top:2rem; }
@@ -64,6 +65,7 @@
             .brand-name { font-size:1.2rem; }
             .about-hero { flex-direction:column; padding:50px 5% 40px; gap:2rem; }
             .photo-placeholder { width:100%; height:200px; }
+            .about-photo { width:100%; max-width:300px; height:auto; }
             .bio-section { padding:40px 5%; }
             .bio-grid { grid-template-columns:1fr; gap:2rem; }
             .values-section { padding:40px 5%; }
@@ -93,13 +95,7 @@
             <h1>John P. Sao Miguel</h1>
             <p class="lead">An exempt market Dealing Representative operating as Corvax Financial, registered with Axcess Capital Advisors Inc. With over 15 years across investment operations, compliance, investor relations, and financial services, I bring institutional discipline to private market investing for accredited and eligible investors in Alberta.</p>
         </div>
-        <div class="photo-placeholder">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="18" r="10" stroke="#2a2a35" stroke-width="2"/>
-                <path d="M4 44c0-11 9-18 20-18s20 7 20 18" stroke="#2a2a35" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-            <p>Photo coming soon</p>
-        </div>
+        <img src="john-portrait.jpg" alt="John P. Sao Miguel" class="about-photo">
     </div>
 
     <!-- Bio -->
