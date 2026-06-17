@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private debt: MICs in a high-rate environment | Corvax Financial</title>
+    <meta name="description" content="A plain-language guide to why Mortgage Investment Corporations (MICs) perform well when interest rates rise.">
+    <style>
+        :root {
+            --bg-color: #0a0a0f;
+            --card-bg: #14141d;
+            --accent-purple: #7b61ff;
+            --text-main: #ffffff;
+            --text-dim: #a0a0b0;
+            --border-color: #2a2a35;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 15, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .brand-name a {
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--text-main);
+        }
+
+        .client-portal {
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        .article {
+            padding: 80px 8% 40px;
+        }
+
+        .article-wrap {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-purple);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .article h1 {
+            font-size: 2.6rem;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .article-meta {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 28px;
+            margin-bottom: 36px;
+        }
+
+        .lede {
+            font-size: 1.2rem;
+            color: var(--text-main);
+            margin-bottom: 32px;
+        }
+
+        .article-body p {
+            color: var(--text-dim);
+            font-size: 1.05rem;
+            margin-bottom: 22px;
+        }
+
+        .article-body h2 {
+            font-size: 1.6rem;
+            color: var(--text-main);
+            margin: 48px 0 18px;
+        }
+
+        .article-body h3 {
+            font-size: 1.15rem;
+            color: var(--text-main);
+            margin: 28px 0 12px;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            color: var(--text-dim);
+            font-size: 1.05rem;
+            margin: 0 0 22px 1.2rem;
+        }
+
+        .article-body li {
+            margin-bottom: 10px;
+        }
+
+        .article-body strong {
+            color: var(--text-main);
+        }
+
+        .article-cta {
+            border-top: 1px solid var(--border-color);
+            margin-top: 48px;
+            padding-top: 32px;
+        }
+
+        .article-cta p {
+            color: var(--text-dim);
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+        }
+
+        .cta-link {
+            color: var(--accent-purple);
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        .article-disclaimer {
+            font-size: 0.8rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 28px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 36px;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .back-link:hover { color: var(--text-main); }
+
+        footer {
+            padding: 80px 8% 40px;
+            border-top: 1px solid var(--border-color);
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-logo {
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .footer-nav h4, .footer-contact h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 20px;
+        }
+
+        .footer-nav ul {
+            list-style: none;
+        }
+
+        .footer-nav li {
+            margin-bottom: 10px;
+        }
+
+        .footer-nav a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .disclaimer {
+            grid-column: span 3;
+            font-size: 0.75rem;
+            color: #555;
+            margin-top: 60px;
+            border-top: 1px solid #1a1a25;
+            padding-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 16px 5%;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                justify-content: flex-start;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 12px;
+                font-size: 0.85rem;
+            }
+
+            .brand-name {
+                font-size: 1.2rem;
+            }
+
+            .article {
+                padding: 50px 5% 30px;
+            }
+
+            .article h1 {
+                font-size: 1.9rem;
+            }
+
+            footer {
+                grid-template-columns: 1fr;
+                padding: 40px 5% 30px;
+                gap: 32px;
+            }
+
+            .disclaimer {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <div class="logo-container">
+        <span class="brand-name"><a href="https://corvaxfinancial.com/index.html">Corvax Financial</a></span>
+    </div>
+    <nav>
+        <a href="https://corvaxfinancial.com/#approach">Approach</a>
+        <a href="https://corvaxfinancial.com/about.html">About</a>
+        <a href="https://corvaxfinancial.com/#insights">Insights</a>
+        <a href="https://portal.raisr.com/" class="client-portal" target="_blank" rel="noopener">Client portal</a>
+    </nav>
+</header>
+
+<article class="article">
+    <div class="article-wrap">
+        <a href="https://corvaxfinancial.com/#approach" class="back-link">← Back to strategies</a>
+        <span class="section-label">Private Debt</span>
+        <h1>Why MICs have outperformed in a high-rate environment</h1>
+        <div class="article-meta">Mortgage investment corporations are not new, but the current rate cycle has made them unusually relevant for income-focused investors.</div>
+        
+        <p class="lede">When you want to invest your money to earn a steady income, you usually think of options like savings accounts, bonds, or stocks. However, there is another corner of the financial world called private debt. Inside this category, a specific type of investment known as a MIC—which stands for Mortgage Investment Corporation—has been getting a lot of attention lately.</p>
+        
+        <div class="article-body">
+            <p>MICs are not a new invention, but recent changes in the economy have made them highly relevant for income-focused investors. To understand why they are performing so well right now, it helps to look at how interest rates affect the way we borrow and lend money.</p>
+            
+            <h2>What is a Mortgage Investment Corporation (MIC)?</h2>
+            <p>Think of a MIC as a giant pool of money collected from many different investors. A professional management team takes this pooled money and lends it out to people or businesses who need a mortgage to buy real estate.</p>
+            <p>In return for the loan, the borrowers pay interest. The MIC collects all of this interest, takes out a small fee for managing the fund, and then passes the rest of the profit directly back to the investors as regular income payments.</p>
+            
+            <h2>The Impact of a High-Rate Environment</h2>
+            <p>Over the past couple of years, central banks have raised interest rates to help control inflation. When interest rates go up, regular banks become much stricter about who they lend money to. They might turn away perfectly good borrowers simply because their strict rules do not allow for flexible situations.</p>
+            <p>This is where MICs step in. Because they are private lenders, they can be more flexible than major banks. They can charge higher interest rates to compensate for the unique situations of their borrowers.</p>
+            
+            <p>In a high-rate environment, MICs outperform for two main reasons:</p>
+            <ul>
+                <li><strong>Floating Interest Rates:</strong> Many of the loans that MICs hand out are short-term or have adjustable interest rates. When regular interest rates go up across the country, the rates on these private mortgages go up too. This means the MIC earns more money, which translates into higher payouts for the investors.</li>
+                <li><strong>More High-Quality Borrowers:</strong> Because big banks are turning people away, higher-quality borrowers who just need quick or temporary financing are turning to private debt. This allows MICs to pick better, safer projects while still charging a premium rate.</li>
+            </ul>
+            
+            <h2>What to Understand Before You Invest</h2>
+            <p>While MICs can offer excellent returns when rates are high, they are not completely risk-free.</p>
+            <ul>
+                <li><strong>Real Estate Risk:</strong> Because the loans are tied to property, a massive drop in the real estate market could hurt the value of the loans.</li>
+                <li><strong>Liquidity:</strong> Unlike stocks, which you can sell at any second on the stock market, your money in a MIC might be locked away for a set period. It is harder to pull your cash out instantly if you suddenly need it.</li>
+            </ul>
+            
+            <h2>Summary</h2>
+            <p>Mortgage Investment Corporations offer a unique way to earn income by acting like a private bank. In an economy where interest rates are high, their ability to charge more for loans allows them to outpace many traditional investments, making them a powerful tool for investors looking to grow their regular income.</p>
+        </div>
+
+        <div class="article-cta">
+            <p style="color:var(--text-main); font-weight:600; margin-bottom:14px;">Explore our other strategies</p>
+            <p style="margin-bottom:24px;">
+                <a href="https://corvaxfinancial.com/strategies/private-equity.html" class="cta-link" style="margin-right:24px;">Private equity</a>
+                <a href="https://corvaxfinancial.com/strategies/real-assets.html" class="cta-link" style="margin-right:24px;">Real assets</a>
+            </p>
+            <p>Want to understand how this might fit your portfolio? Every opportunity we present is reviewed before it reaches a client conversation.</p>
+            <a href="https://corvaxfinancial.com/index.html#contact" class="cta-link">Get in touch with Corvax Financial</a>
+            <p class="article-disclaimer">This page is for general education only and is not investment advice, a recommendation, or an offer to sell securities. Exempt market investments carry risk, including the possible loss of your entire investment, and are not guaranteed or insured. Offerings are made only pursuant to an offering memorandum and only to qualified investors. Speak with a registered dealing representative before investing.</p>
+        </div>
+    </div>
+</article>
+
+<footer>
+    <div>
+        <span class="footer-logo">Corvax Financial</span>
+        <p style="font-size: 0.8rem; color: var(--text-dim);">Disciplined capital.<br>Alternative markets.</p>
+    </div>
+    <div class="footer-nav">
+        <h4>Navigate</h4>
+        <ul>
+            <li><a href="https://corvaxfinancial.com/index.html">Home</a></li>
+            <li><a href="https://corvaxfinancial.com/about.html">About</a></li>
+            <li><a href="https://corvaxfinancial.com/#approach">Approach</a></li>
+            <li><a href="https://corvaxfinancial.com/#insights">Insights</a></li>
+            <li><a href="https://corvaxfinancial.com/#faq">FAQ</a></li>
+            <li><a href="https://portal.raisr.com/" target="_blank" rel="noopener">Client portal</a></li>
+            <li><a href="https://corvaxfinancial.com/risk-disclosure.html">Risk disclosure</a></li>
+            <li><a href="https://corvaxfinancial.com/privacy-policy.html">Privacy policy</a></li>
+            <li><a href="https://corvaxfinancial.com/regulatory-disclosure.html">Regulatory disclosure</a></li>
+        </ul>
+    </div>
+    <div class="footer-contact">
+        <h4>Contact</h4>
+        <p style="font-size: 0.9rem; color: var(--text-dim);">info@corvaxfinancial.com</p>
+        <p style="font-size: 0.9rem; color: var(--text-dim);">587.433.3134</p>
+        <p style="font-size: 0.9rem; color: var(--text-dim);">Canada</p>
+    </div>
+    <div class="disclaimer">
+        Corvax Financial is operated by John P. Sao Miguel, registered as an Exempt Market Dealing Representative in the Province of Alberta with Axcess Capital Advisors Inc. Exempt market products are made available through Axcess Capital Advisors Inc., a registered exempt market dealership. This information does not constitute a solicitation for sale or purchase of securities. Offerings are made pursuant to an offering memorandum and only available to qualified investors in Alberta who meet certain eligibility or minimum purchase requirements. Investments are not guaranteed or insured and the value of investments may fluctuate. The information contained on this website is intended solely for residents of Alberta and is not directed to individuals in any other jurisdiction. Past performance is not indicative of future results.
+        <br><br>
+        <a href="https://corvaxfinancial.com/about.html" style="color:#555; text-decoration:underline; margin-right:20px;">About</a>
+        <a href="https://corvaxfinancial.com/risk-disclosure.html" style="color:#555; text-decoration:underline; margin-right:20px;">Risk disclosure</a>
+        <a href="https://corvaxfinancial.com/privacy-policy.html" style="color:#555; text-decoration:underline; margin-right:20px;">Privacy policy</a>
+        <a href="https://corvaxfinancial.com/regulatory-disclosure.html" style="color:#555; text-decoration:underline; margin-right:20px;">Regulatory disclosure</a>
+        <br><br>© 2026 Corvax Financial. All rights reserved.
+    </div>
+</footer>
+</body>
+</html>
